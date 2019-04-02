@@ -1,7 +1,7 @@
 binaryName := txt2web
 golangContainerTag := 1.12-alpine
 gitCommitId := $(shell git rev-parse head)
-dockerImageName := txt2web
+dockerImageName := andimenge/txt2web
 
 all: binary docker clean
 
