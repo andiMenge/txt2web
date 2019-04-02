@@ -13,6 +13,8 @@ docker:
 
 push:
 	@docker push ${dockerImageName}:${gitCommitId}
+	@docker tag ${dockerImageName}:${gitCommitId} ${dockerImageName}:latest
+	@docker push ${dockerImageName}:latest
 
 clean:
 	rm -v ./txt2web
