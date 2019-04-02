@@ -22,7 +22,7 @@ func main() {
 		http.ServeFile(w, r, file)
 	})
 	
-	// Simple static webserver:
+	// Static fileserver:
 	log.Println("Txt2Web")
 	log.Println("Server running on port:", port)
 	log.Fatal(http.ListenAndServe(":"+ port, nil))
