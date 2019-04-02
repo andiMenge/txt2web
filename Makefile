@@ -3,6 +3,8 @@ golangContainerTag := 1.12-alpine
 gitCommitId := $(shell git rev-parse head)
 dockerImageName := txt2web
 
+all: binary docker clean
+
 binary:
 	@docker run --rm -v ${PWD}:/usr/src/myapp -w /usr/src/myapp -e CGO_ENABLED=0 -e GOOS=linux golang:${golangContainerTag} go build -v -a -installsuffix cgo -o ${binaryName}
 
